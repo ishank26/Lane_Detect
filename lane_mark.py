@@ -230,7 +230,7 @@ f.close()
 if __name__ == '__main__':
 
     ### try on image ######
-    img = cv2.imread("/frame0820.jpg")
+    img = cv2.imread("frame0820.jpg")
 
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
