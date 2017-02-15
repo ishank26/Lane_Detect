@@ -42,7 +42,7 @@ def edge_detect(img, lower_thresh=20, upper_thresh=150):
 
 def clahe_apply(img, tile_size=7, clip_limit=0.8):
     ''' 
-    Apply Contrast Adaptive Adjacent Histogram Equalization 
+    Apply Contrast Limited Adjacent Histogram Equalization 
     Works better than General Histogram Equalization on this dataset
     '''
     clahe = cv2.createCLAHE(clipLimit=clip_limit,
