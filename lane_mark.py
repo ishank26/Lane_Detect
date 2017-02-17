@@ -1,3 +1,9 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+@author: morpheus
+"""
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -111,7 +117,7 @@ def extend_point(x1, y1, x2, y2, length):
 
 
 def merge_lines(lines):
-    lines = np.array(lines)[:, :4]  # Drop last column (slope)
+    lines = np.array(lines)[:, :4]  # drop last column (slope)
     x1, y1, x2, y2 = np.mean(lines, axis=0)
     x1b, y1b = extend_point(x1, y1, x2, y2, -400)  # bottom point
     x2u, y2u = extend_point(x1, y1, x2, y2, 300)  # top point
@@ -170,7 +176,7 @@ def process_lane(img):
     # minimum number of votes (intersections in Hough grid cell)
     threshold = 20
     min_line_len = 10  # minimum number of pixels making up a line
-    max_line_gap = 30    # maximum gap in pixels between connectable line segments
+    max_line_gap = 30  # maximum gap in pixels between line segments
 
     hough_lines = hough(
         edges, rho, theta, threshold, min_line_len, max_line_gap)
