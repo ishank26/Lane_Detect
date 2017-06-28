@@ -1,5 +1,5 @@
 # Lane_Detect
-Lane lines marking detection using IIIT-D dataset. 
+Basic lane marking detection using image processing
 
 ### Output
 ![output](output.png)
